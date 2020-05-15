@@ -1,0 +1,77 @@
+.pukpen@DESKTOP-PUKPEN MINGW64 /c/Romulo/DIO
+$ echo "# DIO" >> README.md
+
+$ git init
+Initialized empty Git repository in C:/Romulo/DIO/.git/
+
+.pukpen@DESKTOP-PUKPEN MINGW64 /c/Romulo/DIO (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+$ git commit -m "first commit"
+[master (root-commit) 6af0f38] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+$ git remote add origin https://github.com/romulopuk/DIO.git
+
+$ git push -u origin master
+
+$ git add --all
+
+$ git commit -m "adicionando pastas cursos"
+
+$ git status
+
+$ git push
+
+Criar arquivo: touch nomeArquivo.txt
+
+---------- AULA 4 - branch ----------
+
+- Branches
+    Permitem diferentes versões de um mesmo conteúdo se desenvolvam ao mesmo tempo
+    e independente, enquanto você recombina as contribuições de diferentes Branches
+    em um processo de merge.
+
+    Mostrar branches:
+        git branch
+
+    Criar branch:
+        git branch <<nome branch>>
+
+    Troca branch:
+        git checkout <<nome branch>>
+
+    Deletar branch:
+        git branch -D <<nome branch>>
+
+    Criar branch e já trocar para ela:
+        git checkout -b <<nome branch>>
+
+---------- AULA 5 - Envie projetos para o repositório remoto ----------
+
+    Subir a branch para o Remoto:
+        git push origin <<nome branch>>
+
+---------- AULA 6 - Aprenda a fazer merge ----------
+
+    Atualiza a sua branch igual a branch selecionada:
+        git merge <<nome branch>>
+
+    Edita mensagem do último commit:
+        git commit --amend
+    
+    From the command line, change into the repository directory.
+    Set your username:
+        git config user.name "FIRST_NAME LAST_NAME"
+    Set your email address:
+        git config user.email "MY_NAME@example.com"
+    Verify your configuration by displaying your configuration file:
+        cat .git/config
+
+    Voltar arquivo para o Original:
+        git checkout -- arquivo.txt
+    
+    

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript</title>
+    </head>
+    <body>
+        <div id="app">
+
+        </div>
+        <script>
+            var endereco = {
+                rua: "Rua dos Pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+
+            var text = 'O usuario mora em '
+            +endereco.cidade+' / '
+            +endereco.uf+', no bairro '
+            +endereco.bairro+', na ' 
+            +endereco.rua+' com nº '
+            +endereco.numero+'.';
+
+            console.log(text);
+
+            pares(50, 120);
+
+            function pares (x, y){
+                for (i = x; i < y; i++){
+                    if (i % 2 == 0){
+                        console.log(i);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

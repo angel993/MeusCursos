@@ -1,0 +1,21 @@
+II – É adequado reduzir o tamanho das fotos em editor de imagem para mais próximo do padrão web antes de inserir no projeto do site.
+III – Com o CSS eu consigo agilizar o redimensionamento padrão das imagens.
+
+Sobre a tag <img> avalie as afirmativas abaixo e assinale a alternativa correta:
+
+I – As imagens podem possuir endereços de sites externos. Se a imagem for deletada, o seu site ainda retêm a imagem.
+*II – As imagens podem ser redimensionadas de forma proporcional ou desproporcional.
+III – JPG é o melhor formato de imagens, por isso foi usado no curso.
+IV – Uma forma de evitar erro por extensão de arquivo de imagem é não especificá-la no código, por exemplo <img src=”imagem”> faz com que ela apareça seja .jpg ou .png.
+
+O atributo id é composto por um valor do tipo string, sendo assim, avalie as afirmativas abaixo e assinale a alternativa correta.
+
+I – String é um valor do tipo texto.
+II – Uma string pode ser um número, sendo que a string “1” somado com a string “1” é igual “2”.
+III – Uma string pode ser um número, sendo que a string “2” somado com a string “2” é igual a “22”.
+IV – Uma string pode conter acentos, mas não como valor do atributo ID.
+V – Uma string pode aceitar símbolos como “*” e “!”, inclusive para associar com o atributo ID.
+
+--------------- CSS ---------------
+CSS estilo para o documento web
+CSS3  novas funcionalidades, animações, transições, mais vida

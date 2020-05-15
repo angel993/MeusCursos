@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript</title>
+    </head>
+    <body>
+        <div id="app">
+
+        </div>
+        <script>
+
+            function geraNomeSkill (x){
+
+                for (var i in x){
+                    var name = x[i].nome;
+                    var skill = x[i].habilidades.join();
+                    console.log("O "+name+" possui as habilidades: "
+                        +skill);    
+                }
+                }
+        
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "React JS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            geraNomeSkill(usuarios);
+        </script>
+    </body>
+</html>

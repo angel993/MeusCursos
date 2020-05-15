@@ -1,0 +1,172 @@
+----------- AULA 2 -----------
+> Product Owner (PO)
+    Representante de negócio;
+    PO é uma pessoa;
+    Define as funcionalidades do software;
+    Prioriza funcionalidades de acordo com o valor do negócio;
+    Garante que o time dev, entenda os itens do backlog no nível necessário;
+
+> Scrum Master (SM)
+    Garante uso correto do SCRUM;
+    Não é gerente de projetos;
+    Age como facilitador;
+    Auxilia o PO no planejamento e estimativas do backlog;
+    Auxilia a equipe a remover impedimentos;
+    Treina o time em autogerenciamento e interdisciplinaridade;
+
+> TIME DEV
+    Desenvolver, testar, criar e desenhar;
+
+Quem é o responsável por priorizar o Backlog?
+- PO
+
+Quem é o responsável por garantir que o time utilize
+a melhor forma do SCRUM?
+- Scrum Master
+
+Quem é responsável por desenhar, construir e
+entregar o software funcionando?
+- Time DEV
+
+----------- AULA 3 -----------
+* Cerimônias do Scrum *
+
+> Time Box:
+tempo máximo definido para uma cerimonia ou sprint;
+
+> Sprint:
+Principal Evento, 30 dias corridos(ou menos);
+    Composição Sprint:
+        - Planejamento
+            - Pariticipa: PO, Dev's, Scrum Master;
+            - Time Box: 8h
+                - 4h (
+                    P.O Tira dúvidas,
+                    Decide o que fazer,
+                    Explica funcionalidades,
+                    Como fazer)
+                - 4h (
+                    Time Dev quebra atividade,
+                    entende o que deve ser feito,
+                    decidem como fazer)
+                - Ferramentas (
+                    Planning Poker,
+                )
+                - Checar se é possível
+
+        - Reuniões diárias
+            - Pariticipa: PO, Dev's, Scrum Master;
+            - Time Box: 15 minutos (
+                O que fez no dia anterior?,
+                O que está programado hoje?,
+                Tem impedimento?)
+            - Precisa ser de pé;
+            - Sempre no mesmo horário e local;
+                
+        - Revisão da Sprint
+            - Últmo dia da Sprint
+            - Dev apresenta trabalho feito
+            - Time Box: 4h (sprint 30 dias)
+            - Não dá mais tempo pra mexer
+            - Produção ou outra sprint
+
+        - Retrospectiva da Sprint
+            - Último dia
+            - Participa: Dev (Pode por mais gente)
+            - Apontar erros com transparência da equipe
+            - Time Box: 3h (sprint 30 dias)
+
+----------- AULA 4 -----------
+* NUBANK
+    
+    Gestão de Projetos Tradicional
+                x
+        Gestão de Projetos Ágil
+
+    Evolui aos poucos, conforme seu feedback positivo;
+
+----------- AULA 5 -----------
+> Estória x Épico x Tarefa
+
+> Épicos de Projeto Bicicleta:
+    Roda, garfo, quadro, selim, sistema freio e tração
+    
+    * Épicos são sempre objetivos macros a serem atingidos
+    São usualmente divididos em objetivos menores.
+    Épico garfo é dividido em: Garfo, Guidão e amortecedores.
+
+> Estórias: 
+    * Guidão é uma Estória do Épico Garfo.
+    Como o Pedal é uma estória do Épico Sistema de Tração.
+
+> Tarefas:
+    * Para a realização da Estória Garfo, Precisa
+    das Tarefas "Montar o Guidão", "Montar o garfo",
+    "Montar o garfo no quadro", "Montar roda no garfo",
+    "Montar sistema de freio na roda".
+
+> Épico é um conjunto de Estórias.
+    Estória é um conjunto de tarefas.
+
+> Exemplo de uma Estória:
+    - Nome
+    - Descrição
+        (Eu, Como, Quero, Quando)
+    - Regras de negócio
+        (Separar Regras de Front e Back)
+    - Tela
+        (Link ou imagem das delas a serem 
+        desenvolvidas)
+    - KPI
+        (Quais Objetivos/Valores a estória precisa 
+        atingir)
+    - Tagueamento
+        (Como a Estória será "tagueada", para 
+        mensurar os KPI)
+    - Critérios de Aceite 
+        (Qual o caminho feliz a estória deve cumprir, 
+        para ser aceita)
+
+* Característica de Estória: Tarefa nível negócio.
+* Tarefa = Atividade DEV para entregar estória
+- - - -
+
+> Parte 2: Critérios de Aceite, Estimativa em
+Planejamento de Tarefas
+
+    - Critério de Aceite:
+        Lista de critérios que precisam ser 
+        alcançados para que a User Story atenda
+        os requisitos do usuário e seja aceita
+        pelo Product Owner
+
+        Objetivos:
+            - Define limites para User Stories
+            - Ajuda P.O a definir o alto nível
+                que é necessário para entregar
+                ao cliente.
+
+> Planning Poker
+    Cartas com numero de fibonacci usadas para estimar o tempo das tarefas
+
+> Planning T shirt size
+
+* Planning Poker - Atividade de Mensuração do esforço e complexidade
+    das tarefas ou Estórias
+- - - -
+
+> Parte 3: Relacionamento com clientes / Stakeholders
+
+    - Stakeholder é uma pessoa ou grupo que legitimiza as ações de uma organização
+     Tem um papel na gestão e resultados da organização.
+
+
+----------- AULA 6 -----------
+Daily e Retrospectiva
+
+* O Refinamento acontece um passo antes da Planning, na final da sprint anterior
+* O objetivo da Review é verificar se a demanda agrega valor ao negócio
+* Participação na Review = time de desenvolvimento + Scrum Master
+
+*Compõe um Product Backlog = Epico, estoria, atividade
+*Método mais indicado para definir escopo = Entender o ganho antes de definir

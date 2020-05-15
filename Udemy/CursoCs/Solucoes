@@ -1,0 +1,332 @@
+static void Main(string[] args)
+        {
+            int entrada;
+            int soma = 0;
+
+            Console.Write("Quantos numeros serao? ");
+            entrada = int.Parse(Console.ReadLine());
+            for (int i = 0; i < entrada; i++)
+            {
+                Console.Write("Digita o numero " + (i + 1) + ": ");
+                int numero = int.Parse(Console.ReadLine());
+                soma += numero;
+            }
+            Console.Write("A soma deles é: ");
+            Console.WriteLine(soma);
+            
+            Console.ReadLine();
+        }
+		
+		
+=========================================================
+/* TABOADA */
+static void Main(string[] args)
+        {
+            int entrada;
+            int resultado;
+
+            Console.Write("Digite o numero da Tabuada: ");
+            entrada = int.Parse(Console.ReadLine());
+            for (int i = 0; i < 10; i++)
+            {
+                resultado = entrada * (i + 1);
+                Console.WriteLine((i + 1) + " x " + entrada + " = " + resultado);
+               
+               
+            }
+                        
+            
+            Console.ReadLine();
+        }
+=========================================================
+/* SOMA DE NUMEROS IMPARES NOS INTERVALOS */
+
+static void Main(string[] args)
+        {
+            int num1;
+            int num2;
+            int validador = 0;
+
+            Console.Write("Digite o primeiro numero: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.Write("Digite o segundo numero: ");
+            num2 = int.Parse(Console.ReadLine());
+
+            if (num1 < num2)
+            {
+                for (int i = num1+1; i < num2; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        validador += i;
+                    }
+                }
+            }
+            else if (num1 > num2)
+            {
+                for (int i = num2+1; i < num1; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        validador += i;
+                    }
+                }
+            }
+            else
+            {
+                validador = 0;
+            }
+
+
+            Console.WriteLine(validador);
+            Console.ReadLine();
+        }
+		
+=========================================================		
+/*SOMA DOS NUMEROS IMPARES NOS INTERVALOS, COM REPETICAO*/
+
+static void Main(string[] args)
+        {
+            int n, x, y;
+
+            Console.Write("Quantos testes serão feitos? ");
+            n = int.Parse(Console.ReadLine());
+            Console.Write("\n");
+
+            for (int i = 0; i<n; i++)
+            {
+                Console.WriteLine("Teste No " + (i + 1) + ": ");
+                Console.WriteLine("Digite o 1o num, dê espaço e digite o 2o: ");
+                
+                string[] vet = Console.ReadLine().Split(" ");
+                x = int.Parse(vet[0]);
+                y = int.Parse(vet[1]);
+
+                int min, max;
+                int soma = 0;
+                min = x < y ? x : y;
+                max = y < x ? x : y;
+
+                for(int z = min; z < max; z++)
+                {
+                    soma = (z+1) % 2 != 0 && (z+1) < max ? (z + 1) + soma : soma;
+                }
+                Console.WriteLine("Qual a soma dos números ímpares entre " + min + " e " + max + "?");
+
+                Console.WriteLine(soma);
+            }
+            Console.ReadLine();
+			
+
+        }
+		
+		
+=========================================================
+/*LER NUMERO N DE ENTRADAS E MOSTRAR NA SAIDA - VETORES*/
+		
+static void Main(string[] args)
+        {
+            int n;
+
+            n = int.Parse(Console.ReadLine());
+            double[] vet = new double[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                vet[i] = double.Parse(Console.ReadLine());
+            }
+
+            for (int z = 0; z < n; z++) 
+            {
+                Console.WriteLine(vet[z]);
+            }
+
+            Console.ReadLine();
+        }
+		
+	=========================================================
+/*ENTRADA COM N VETORES E MOSTRAR APENAS NEGATIVOS*/
+	
+static void Main(string[] args)
+        {
+            int n;
+
+            n = int.Parse(Console.ReadLine());
+            double[] vet = new double[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                vet[i] = double.Parse(Console.ReadLine());
+            }
+
+            for (int z = 0; z < n; z++) 
+            {
+                if(vet[z] < 0)
+                {
+                    Console.WriteLine(vet[z]);
+                }
+                
+            }
+
+            Console.ReadLine();
+        }
+		
+=========================================================
+/* VETOR: ENTRAR COM N VALOR, VETOR EM LINHA, 
+IMPRIMIR VALORES EM LINHA + SOMA VETOR + MEDIA */
+
+static void Main(string[] args)
+        {
+            int n;
+
+            n = int.Parse(Console.ReadLine());
+            double[] vet = new double[n];
+            string[] s = (Console.ReadLine()).Split(' ');
+
+            for (int i = 0; i < n; i++)
+            {
+                vet[i] = double.Parse(s[i]);
+            }
+
+            double soma = 0;
+            double media = 0;
+            for (int z = 0; z < n; z++) 
+            {
+                Console.Write(vet[z] + " ");
+                soma += vet[z];
+            }
+            Console.WriteLine("\n" + soma);
+            media = soma / n;
+            Console.WriteLine(media);
+            Console.ReadLine();
+        }
+		
+=========================================================
+/*UM VETOR ALIMENTA 3 VETORES (NOME, IDADE, ALTURA)
+DEPOIS CALCULA MEDIA ALTURA E IDADE COM MENOS DE 16*/
+
+static void Main(string[] args)
+        {
+            int n;
+            double media, porc;
+            double soma = 0;
+            double cont = 0;
+
+            n = int.Parse(Console.ReadLine());
+            
+            string[] vet = new string[n];
+            string[] nome = new string[n];
+            int[] idade = new int[n];
+            double[] altura = new double[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                vet = Console.ReadLine().Split(' ');
+                nome[i] = vet[0];
+                idade[i] = int.Parse(vet[1]);
+                altura[i] = double.Parse(vet[2], CultureInfo.InvariantCulture);
+            }
+            
+            for (int z = 0; z<n; z++)
+            {
+                soma += altura[z];
+            }
+            
+            for (int x = 0; x < n; x++)
+            {
+                if (idade[x] < 16)
+                {
+                    cont++; 
+                }
+            }
+            media = soma / n;
+            porc = cont * 100 / 5;
+
+            Console.WriteLine("Altura média: " + media);
+            Console.WriteLine("Pessoas com menos de 16 anos: " + porc + "%");
+
+            Console.ReadLine();
+        }
+		
+=========================================================
+/* MATRIZ QUADRADA DE N, MOSTRO DIAGONAL PRINCIPAL
+E QUANTIDADE DE NUMEROS NEGATIVOS */
+
+static void Main(string[] args)
+        {
+            int n;
+            int[,] mat;
+            int negativo = 0;
+
+            n = int.Parse(Console.ReadLine());
+            mat = new int[n, n];
+
+            for (int i = 0; i < n; i++)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+
+                for (int j = 0; j < n; j++)
+                {
+                    mat[i, j] = int.Parse(vet[j]);
+                }
+            }
+
+            Console.Write("Diagonal Principal: ");
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(mat[i, i] + " ");
+            }
+
+            Console.WriteLine();
+            
+            for(int i = 0; i<n; i++)
+            {
+                for(int j = 0; j<n; j++)
+                {
+                    if (mat[i,j] < 0)
+                    {
+                        negativo++;
+                    }
+                }
+            }
+            Console.WriteLine("Numeros negativos: " + negativo);
+            Console.ReadLine();
+        }
+		
+=========================================================
+/* MATRIZ [M,N] QUE VAI SOMAR OS NUMEROS DE CADA LINHA */
+
+static void Main(string[] args)
+        {
+            int m;
+            int n;
+            int[,] matriz;
+
+            string[] s = Console.ReadLine().Split(' ');
+            m = int.Parse(s[0]);
+            n = int.Parse(s[1]);
+            matriz = new int[m, n];
+
+            for (int i = 0; i<m; i++)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+                for (int j = 0; j<n; j++)
+                {
+                    matriz[i, j] = int.Parse(vet[j]);
+                }
+            }
+
+            for (int i = 0; i<m; i++)
+            {
+                int soma = 0;
+
+                for (int j = 0; j<n; j++)
+                {
+                    soma = matriz[i, j] + soma;
+                }
+                Console.WriteLine(soma);
+            }
+
+            Console.ReadLine();
+        }
