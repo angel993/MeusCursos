@@ -1,0 +1,28 @@
+ECMAScript:
+    - Especificação da linguagem de programação
+
+TC39:
+    - Comitê que decide mudanças no ECMAScript
+    - Fluxo de Propostas:
+        - Stage 0: Strawnman
+        - Stage 1: proposal
+        - Stage 2: draft
+        - Stage 3: candidate
+        - Stage 4: finish
+
+Linguagem Interpretada:
+    Código executado de cima pra baixo e o resultado
+        da execução é imediatamente retornado.
+
+Linguagem Compilada
+    Código transformado em algo diferente para que o
+        código seja executado pelo computador
+
+Tipagem: Fraca e Dinâmica
+
+Typescript:
+ 
+Funções de primeira classe e ordem maior:
+
+Closure:
+
