@@ -26,3 +26,50 @@ Funções de primeira classe e ordem maior:
 
 Closure:
 
+Currying: Técnica de transformar uma função com vários parâmetros 
+    em apenas uma função.
+
+Hoisting: Levantar ou suspender algo. Tipos de variáveis e Funções.
+    Hoisting de variável, só eleva a criação de variável. 
+        Não a atribuição.
+    A função é elevada ao topo como um todo. Você vai ter a assinatura
+        lá.
+
+Imutabilidade: 
+
+--
+spread operator
+string literal
+
+var nameVar = 'Romulo';
+console.log('nameVar: ' +nameVar); == console.log(`nameVar: ${nameVar}`);
+
+Variaveis:
+    - var:
+        escopo global ou de função
+    - let:
+        escopo de bloco (Se eu defino em um if, ela só vale lá)
+    - const:
+        escopo de bloco
+
+-------------------- AULA 2 --------------------
+* Tipos e variáveis
+    - Primitivos: 
+        string; 
+        number;
+        boolean;
+        null;
+        undefined;
+        symbol;
+    
+    - Object
+    - Function
+    - Array
+
+    
+
+* Operadores
+* Condicionais
+* Repetição em Javascript ES6
+
+
