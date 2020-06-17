@@ -1,0 +1,68 @@
+---------- AULA 01 ----------
+
+- - - Uso de command line - - -
+(mvn spring-boot: run -> inicia o servidor)
+(ctrl+c -> encerra o servidor)
+
+Subir projeto em porta específica:
+    mvn spring-boot:run -Dserver.port=8085
+
+
+- - - application-prod.properties (xml) - - -
+#PROD environment
+
+app.message=This is the property file fo the ${spring.application.name} specific to PROD Environment
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=<MYSQL_URL>
+spring.datasource.username=<USERNAME>
+spring.datasource.password=<PASSWORD>
+- - - - - - - - - -
+
+- - - application-dev.properties (yml) - - -
+#DEV environment
+
+app:
+  message: This is the property file fo the ${spring.application.name} specific to DEV Environment
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+- - - - - - - - - -
+
+- - - - AppController - - - -
+package com.digitalinnovationone.springbootconfig;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AppController {
+
+	@Value("${app.message}")
+	private String appMessage;
+
+	@Value("${ENV_DB_URL:NENHUMA}")
+	private String dbEnvironmentVariable;
+	
+	@GetMapping("/")
+	public String getAppMessage() {
+		
+		return appMessage;
+	}
+
+	@GetMapping("/envVariable")
+	public String getEnvironmentVariable() {
+
+		return "A seguinte variável de ambiente foi passada: " + dbEnvironmentVariable;
+	}
+}
+- - - - - - - - - -
+
+link github: http://github.com/rpeleias/springbootprofile_digital_innovation_one
+
+https://dzone.com/articles/spring-boot-profiles-1

@@ -1,0 +1,51 @@
+# Instalação Ambiente
+## Instalando Java 10
+
+$ sudo add-apt-repository ppa:linuxuprising/Java
+$sudo apt update
+$sudo apt install oracle-java10-installer
+
+$ java --version
+
+## Ferramentas de build
+
+### Gradle
++ https://gradle.org/
+
+- versão 4.7
+- Ganhando popularidade (Android Studio)
+- Usa linguagem de programação Groovy
+
+$mkdir /opt/gradle
+$cd Global\ Labs\ Academy
+$unzip -d /opt/gradle gradle-4.7-bin.zip
+$ls /opt/gradle/gradle-4.7
+$ export PATH=$PATH:/opt/gradle/gradle-4.7/bin
+
+$ sudo apt purge gradle //old versions
+
+$ gradle -version
+
+### Maven
++ https://maven.apache.org/
+
+- versão 3.5.3
+- Legados do ANT
+- Baseado em XML
+
+$ unzip -d /opt/maven apache-maven-3.5.3.zip
+$ ls /opt/maven/apache-maven-3.5.3
+$ sudo apt purge maven //old versions
+$ export PATH=$PATH:/opt/maven/apache-maven-3.5.3/bin
+
+$ mvn -v
+
+## Instalando o IntelliJ
+
+$ cd ~/firefox
+$./firefox --new-instance --safe-mode
+
++ https://www.jetbrains.com/idea/
+$ cd Global\ Labs\ Academy$ sudo tar -xzf ideaIC-2018.1.4.tar.gz
+$ cd idea-IC-181.5087.20/bin/
+$ ./idea.sh
