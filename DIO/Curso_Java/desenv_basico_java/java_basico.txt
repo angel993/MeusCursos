@@ -1,0 +1,122 @@
+---- JAVA ----
+github: andrelugomes / digital-innovation-one
+
+- - - - - - - - - -
+//Classe se chama "SuperUsuario"
+public class SuperUsuario {
+
+//As variáveus são os atributos da classe
+    private String login;
+    private String senha;
+    String nome;
+
+//Construtor da classe com 2 parametros
+    public SuperUsuario(final String login, final String senha){
+        this.login = login;
+        this.senha = senha;
+    }
+
+//Métodos com retorno
+    public String getLogin() { 
+        return login; 
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+}
+- - - - - - - - - -
+- - - - - - - - - -
+public class ProgramaDoUsuario {
+    public stativ void main(String[] args) {
+        final var superUsuario = new SuperUsuario( login: "root", senha: "1234");
+
+        superUsuario.getLogin();
+        superUsuario.getSenha();
+
+        String root = superUsuario.nome;
+    }
+}
+- - - - - - - - - -
+
+---- JAVA - TIPOS PRIMITIVOS ----
+byte / char / short / int / long / float / double / boolean
+
+---- JAVA - WRAPPERS (Objetos) ----
+Byte / Character / Short / Integer / Long / Float / Double / Boolean
+
+Autoboxing: 
+    Não precisa dar new, o compilador auto constrói.
+    Você usa um Wrapper no lugar de tipo primitvo.
+
+Unboxing: 
+    Objetos WRAPPERS sendo atribuídos à tipos PRIMITIVOS
+
+---- JAVA - TIPAGEM FORTE E ESTÁTICA ----
+Estática: Se o tipo for "int" não dá pra declarar uma string
+Forte: Se você tipar como um tipo "int" não poderá trocar para outro tipo.
+
+- - - - - - - - - - JAVA 10 ADIANTE - - - - - - - - - -
+Inferência: Utilização de "var", mas a tipagem ainda é forte (não pode trocar)
+
+---- JAVA - MODIFICADORES DE ACESSO ----
+public:
+    - Pode ser acessado de qualquer lugar por qualquer entidade
+
+private (métodos e atributos da classe):
+    - Só podem ser vistos por aquela classe
+
+protected:
+    - Consegue acessar quando no mesmo pacote
+
+default:
+    - É vísivel quando no mesmo pacote
+
+
+---- JAVA - MODIFICADORES DE ACESSO 2 ----
+abstract (classes e métodos):
+    - Não pode ser instanciada
+    - Se tiver um método abstrato a classe precisa ser também
+    - Quando você implementa um método abstrato, precisa de @Override
+    - Vira um tipo, posso criar um novo Objeto
+
+static 
+    - o valor desse atributo, vai sempre estar presente em suas
+instâncias
+
+final
+    - (Classe) Não consigo estender classe
+    - (Método) Não pode ser sobrescrito
+    - (Variável) Depois que for atribuído, não altera
+
+---- JAVA - INTERFACES ----
+    Java 8+:
+        - Novos métodos não quebram as implementações
+
+    - Se interface é publica, métodos sem modificador também serão.
+    - Quando Classe implementa Interface, ela vira aquela Interface.
+    - Precisa dar Override em métodos abstratos
+    - Herda método Default, sem precisar declarar
+    - Classe pode herdar mais de uma interface
+    - Interface pode herdar Interface
+
+Caso 2+ Interfaces tenham o mesmo método Default, preciso de @Override e:
+    1. usar o super, pra indicar qual interface eu uso:
+        @Override
+        public void ligar(){
+            Carro.super.ligar();
+
+        }
+        
+    2. alterar o método:
+        @Override
+        public void ligar(){
+            //Outro código;
+
+        }
+
+---- JAVA - ENUMS ----
+    - Dicionário de dados imutáveis
+    - Não pode criar novas instâncias
+    - Construtor é sempre private
+    - Por convenção, nomes são maiúsculos
