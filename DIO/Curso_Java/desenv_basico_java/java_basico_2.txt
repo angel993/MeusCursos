@@ -1,0 +1,85 @@
+===== String Métodos =====
+    - string.charAT(5)
+Me mostra a quinta letra
+    - string.length()
+Mostra o tamanho 
+    - string.trim()
+Corta o próximo espaço
+    - string.toLowerCase()
+Deixa as letras minúsculas
+    - stirng.toUpperCase()
+Deixa as letras maiúsculas
+    - string.contains("A")
+Quer saber se na palavra tem letra A (r: true/false)
+    - string.replace()
+Troca a palavra escrita
+    - string.equals()
+Compara se o valor é igual à:
+    - string.equalsIgnoreCase()
+Compara se o valor é igual, sem case sensitive
+    - string.substring(1, 6)
+Pega o caracter do 1 ao 6
+    - string.toCharArray()
+Cria um array de char
+    - string.split(" ")
+Retira os espaços ou o que estiver como parametro
+    - string.concat("Java")
+Concatena o que estiver de parametro
+    - string.replace("Exemplo")
+Substitui pela palavra especificada
+- - - - - - - -
+
+- - - - - String.format - - - - -
+String.format (
+    "O cliente %s possui sobre nome $s", 
+    nome, sobreNome);
+)
+- - - - - - - -
+
+- - - - - StringBuilder - - - - -
+var nome = "Andre";
+final var builder = new StringBuilder(nome);
+System.out.println(builder.append("Luis"));
+
+final var reverse = builder.reverse();
+System.out.println(reverse);
+
+final var inser = reverse.insert(i:0, s:"#").insert(
+    reverse.length(), s:"#");
+System.out.println(insert);
+- - - - - - - -
+
+===== Condicionais (IF) =====
+if (condicao){
+    System.out.println("Verdadeiro")
+} else {
+    System.out.println("Falso")
+}
+
+final var ternario = condicao ? "Verdadeiro" : "Falso";
+System.out.Println(ternario);
+
+final var letra = "B";
+
+if ("A" == letra)
+if !("A" == letra)
+if ("A".equals(letra))
+if !("A".equals(letra))
+- - - - - - - -
+
+===== Laços (FOR) =====
+
+===== Convenções =====
+Checkstyle plugin
+The PMD plugin (analise mais profunda)
+
+abre o build.gradle
+
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'pmd'
+}
+
+
+

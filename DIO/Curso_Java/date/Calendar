@@ -1,0 +1,19 @@
+----- Calendar -----
+
+- Calendar é uma data abstrata que provê métodos
+para converter data entre um intante específico.
+
+O Calendar possui alguns campos específicos para
+manipulação como MONTH, YEAR, HOUR etc.
+
+-----
+import java.util.Calendar;
+
+public class Exemplo0005 {
+    public static void main(String[] args) {
+
+        Calendar agora = Calendar.getInstance();
+
+        System.out.println(agora);
+    }
+}

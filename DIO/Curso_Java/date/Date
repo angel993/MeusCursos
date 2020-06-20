@@ -1,0 +1,68 @@
+----- -----
+Date()
+
+    - Aloca um objeto de classe Date inicializado
+    com o milissegundo mais próximo do período da
+    sua execução
+
+import java.util.Date;
+
+public class Exemplo001 {
+    public static void main(String[] args) {
+
+        Date novaData = new Date();
+        System.out.println(novaData);
+
+        //retorna: Fri Jun 19 20:12:45 BRT 2020
+    }
+}
+
+-----------
+Date(long date)
+
+    - Ele espera que você passe os milissegundos, 
+    com base no padrão de tempo (epoch) que usa
+    como referência 1 de Janeiro de 1970 00:00:00.
+
+* "Epoch timestamp é um padrão largamento aceito 
+para representar uma data como um inteiro 32-bits 
+a partir do ínicio do Unix Epoch"
+
+System.currentTimeMillis()
+
+- Retorna o milissegundo mais próximo de sua 
+execução com base no Sistema Operacional
+ 
+import java.util.Date;
+
+public class Exemplo002 {
+    public static void main(String[] args) {
+
+        Long currentTimeMillis = 
+            System.currentTimeMillis();
+
+        System.out.println(currentTimeMillis);
+        // 1563127311564
+
+        Date novaData = new Date(currentTimeMillis);
+
+        System.out.println(novaData);
+        // Fri Jun 19 20:12:45 BRT 2020
+    }
+}
+
+----- Métodos Úteis --- Retorno -----
+    
+    - after(Date)       boolean
+    - before(Date)      boolean
+    - compareTo(Date)   int
+    - equals(Date)      boolean
+    - getTime()         long
+    - setTime(long)     void
+    - from(Instante)    static Date
+    - toInstant()       Instant
+--------------------------------------
+
+
+
+
